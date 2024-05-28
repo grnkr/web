@@ -1,0 +1,576 @@
+css:
+table of content:
+what is css
+history of css
+css editors
+css basic structure
+css comments
+different ways to write css
+css selectors
+color property
+background property
+border property
+box model
+----------------------
+what is css:
+CSS stands for Cascading Style Sheets
+If HTML is the structure of the house then css is the look and feel of the house
+It's the language to make our web pages presentable
+Designed to make style sheets for web
+Now, let's try to break the acronym.
+Cascading: Falling of Styles
+       Style: Adding designs/Styling our HTML tags
+        Sheets: Writing our style in different documents.
+--------------------
+History:
+1994:1st proposed by hakon wium lie on 10th october.
+1996:css was published on 17th nov with influencer Bert Bos Later he become co-author of css
+1996:css become official with css was published in December.
+1997:created css level2 on 4th november.
+1998:published on 12th may.
+--------------------
+css editors:
+visual studio code 
+brackets
+atom
+espresso(Mac user)
+notepad++ (Great for html & css)
+sublime text
+----------------------
+css basic structure:
+Selector {
+property1:value;
+property2:value;
+property3:value;
+ }
+
+Selector : selects the element you want to target
+There are few basic selector like tags, id's and classes
+All forms this key-value pair
+key: properties(attributes) like color,font-size, background, width, height, etc
+Value: values associated with these properties.
+Always remains same whether we apply internal or external styling.
+-------------------------
+comments:
+two types 
+1.single line comments
+2.multi line comments
+ex:
+it is representation by 
+/*
+this 
+is 
+called multi line comment
+*/
+and 
+/* this is called single line comment*/
+-------------------------------
+different ways to write css
+There are 3 ways to write css in our html file.
+->inline css
+->internal css
+->external css
+
+priority order:
+inline > internal > external
+--------------------------------------
+inlines  css:
+before css this was the only way to apply styles
+not an efficient way to write as it has lot a redundancy.
+self contained
+uniquely applied on each element
+idea of separation of concerns was lost
+ex:
+<html>
+    <head>
+        <title>inline css</title>
+    </head>
+    <body>
+        <p style="color:blue; text-align: center;">welcome to this world!</p>
+
+    </body>
+</html>
+-------------------------
+Internal css:
+with the help of style tag we can apply styles within the html file.
+Redundancy is removed
+But idea of separation of concerns still lost.
+Uniquely applied on single document.
+ex:
+<html>
+    <head>
+        <title>internal css</title>
+        <style>
+          h3{
+            color:red;
+          }
+        </style>
+    </head>
+    <body>
+        <h3>have a great day!</h3>
+    </body>
+</html>
+--------------
+<html>
+  <head>
+    <title>INTERNAL CSS</title>
+    
+  </head>
+  <body bgcolor="black">
+    <p>the life is war.</p>
+    <p>the race is cars.</p>
+    <p>the rider is bikes</p>
+    <p>the power is legend.</p>
+    <style>
+      p{
+        color:red;
+        margin-left: 2%;
+      }
+    </style>
+  </body>
+</html>
+---------------------------
+External css:
+index.html
+code:
+<html>
+  <head>
+    <title>external css</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>war is life</p>
+    <p>personal is public to access</p>
+  </body>
+</html>
+
+style.css
+p{
+    border: solid;
+    background-color: wheat;
+}
+-------------------------------
+Selectors:
+three simple selectors:
+1.element selector
+2.id selector
+3.class selector
+
+priority of selectors:
+id>class>element
+
+Element Selector:
+h1{
+color:red;
+}
+
+code : 
+<html>
+  <head>
+    <title>element selector</title>
+    <style>
+      h1{
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this is a heading</h1>
+  </body>
+</html>
+-----------------
+id Selector:
+#unique{
+color:green;
+}
+code:
+<html>
+  <head>
+    <title>id selector</title>
+    <style>
+      #war{
+        color:red;
+      }
+      #demo{
+        border: solid;
+      }
+
+    </style>
+  </head>
+  <body>
+<p id="war">the life is war.</p>
+<p id="cr">the race is cars.</p>
+<p id="demo">the rider is bikes</p>
+<p id="hai">the power is legend.</p>
+  </body>
+</html>
+----------------------
+class Selector:
+.group{
+color:red;
+}
+
+code:
+<html>
+  <head>
+    <title>id selector</title>
+    <style>
+      .war{
+        color:goldenrod;
+      }
+      .a{
+        font-size: xx-small;
+      }
+      .b{
+        background-color: blue;
+      }
+      .c{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+<p class="war"></p>
+<p id="cr"></p>
+<p id="demo"></p>
+<p id="hai"></p>
+<p class="war">the life is war.</p>
+<p class="c">the race is cars.</p>
+<p class="a">the rider is bikes</p>
+<p class="b">the power is legend.</p>
+  </body>
+</html>
+----------------
+universal selector:
+*{
+color:red;
+}
+
+<html>
+  <head>
+    <title>id selector</title>
+    <style>
+      *{
+        font-size: xx-small;
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>welcome to this world!.</h1>
+    <h2>welcome to this world!.</h2>
+    <h3>welcome to this world!.</h3>
+    <p>welcome to this world!.</p>
+  </body>
+</html>
+----------------------------
+group selector:
+      h1,p{
+        color:red;
+      }
+
+<html>
+  <head>
+    <title>group selector</title>
+    <style>
+      h1,p{
+        color:red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>hi</h1>
+    <p>bye</p>
+  </body>
+</html>
+------------------------------
+Descendant combinator Selector:
+<html>
+  <head>
+    <title>Descendant Combinator selector</title>
+    <style>
+#out .in{
+  color:green;
+  background: yellow;
+}
+    </style>
+  </head>
+  <body>
+    <div id="out">
+      <div class="in">
+        hi
+      </div>
+    </div>
+  </body>
+</html>
+-----------------
+Child Combinator selector:
+<html>
+  <head>
+    <title>Child Combinator selector</title>
+    <style>
+#out>.in{
+  color:red;
+  background: black;
+}
+    </style>
+  </head>
+  <body>
+    <div id="out">
+      <div class="in">
+        hi
+      </div>
+    </div>
+  </body>
+</html>
+----------------------
+Pesudo class selector:
+<html>
+  <head>
+    <title>Pesudo class selector</title>
+    <style>
+div:hover{
+  color:red;
+  background: black;
+}
+    </style>
+  </head>
+  <body>
+    <div id="out">
+      <div class="in">
+        hi
+      </div>
+    </div>
+  </body>
+</html>
+----------------------------
+color:
+RGB(Red,Green,Blue) in 3 parameters rgb
+value of each parameters may vary from o to 255.
+eg:
+rgb(255,0,0)
+
+HEX:
+HEX code starts with # and comprises of 6 numbers ( which is further divided into 3 sets)
+red,green,blue
+A single set value can vary from 00 to ff
+eg:
+#af019f
+
+<html>
+  <head>
+    <title>color codes</title>
+    <style>
+div{
+  color:#0fff00;
+  background: rgb(75,25,175);
+}
+    </style>
+  </head>
+  <body>
+    <div id="out">
+      <div class="in">
+        hi
+      </div>
+    </div>
+  </body>
+</html>
+--------------------------------------
+Background:
+color,repeat,image,position,attachment 
+
+<html>
+  <head>
+    <title>background</title>
+    <style>
+       *{
+        background: url(images/download.jpg);
+        background-attachment: fixed;
+        background-position:left;
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       h1,p{
+        color:white;
+        font-size: xx-large;
+       }
+    </style>
+  </head>
+  <body>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p><h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+
+    <h1>welcome to this world!</h1>
+    <p>the subject is learning.</p>
+  </body>
+</html>
+-------------------------
+Border:
+4 properties:
+width
+style
+color
+radius
+
+ex:
+border-width:2px 5px;
+2px( top and bottom)
+5px( left and right)
+
+ex:
+border:2px solid blue;
+
+code:
+<html>
+  <head>
+    <title>border</title>
+<style>
+  pre{
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px 5px;
+    border-radius: 50%;
+    text-align: center;
+  }
+</style>
+  </head>
+  <body>
+ <pre>anger is fire cool is water 
+  oxgen is air 
+  sad is wall </pre>
+  </body>
+</html>
+--------------------------
+Box Model:
+4edges
+ content edge
+ padding edge
+ border edge
+ margin edge
+
+<html>
+  <head>
+    <title>box model</title>
+    <style>
+      p{
+        border: 2px solid red; 
+        margin: 5px;
+        padding: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+  <p>box model</p>
+  </body>
+</html>
+--------------------
+Text and Font:
+text color
+text alignment
+text decoration
+text transformatin
+font color
+font family
+font size
+font variant
+font weight
+
+code:
+<html>
+  <head>
+    <title>box model</title>
+    <style>
+      a,p{
+        font-variant:small-caps;
+        font-weight: bolder;
+       font-size: xx-large;
+      font-family: 'Times New Roman', Times, serif;
+       color: red;
+       text-align: center;
+       text-decoration: none;
+       text-transform:uppercase;
+
+      }
+    </style>
+  </head>
+  <body>
+  <p>welcome to this worlds</p>
+  <a href="https://youtu.be/rn6GmQStrTA">video song</a>
+  </body>
+</html>
+--------------------------
+Pseudo Classes:
+syntax:
+selector:pseudo-class{
+property:value;
+}
+
+pseudo-class:
+:active - its used to add style to an active element.
+:hover - it adds special effects to an element when the user moves the mouse pointer over the element.
+:link - it adds style to the unvisted link.
+:visited - it adds style to the visited link.
+
+code:
+<html>
+  <head>
+    <title>box model</title>
+    <style>
+      body{
+        text-align: center;
+      }
+      h1:hover{
+        color:red;
+      }
+      a:visited{
+        color: red;
+
+      }
+      a:active{
+        color:yellow;
+      }
+      a:link{
+        color:green;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>hello world</h1>
+  <h2>this is an example of :hover pseudo class</h2>
+  <h3>click the following link to see the effect</h3>
+  <a href="https://www.google.com">Click the link</a>
+  <a href="https://www.youtube.com">click the link</a>
+  </body>
+</html>
